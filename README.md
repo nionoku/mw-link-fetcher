@@ -43,3 +43,25 @@ npm run lint
 ```
 npm run logs
 ```
+## Example
+
+**POST** */fetch*
+```
+{
+    "link": "iframe link"
+}
+```
+
+*Result:*
+```
+{
+    "m3u8: "stream link",
+    "mp4": {
+        "1080": "mp4 link",
+        "720": "mp4 link",
+        "480": "mp4 link",
+        "360": "mp4 link"
+    },
+    "sub": "sub link"
+}
+```
