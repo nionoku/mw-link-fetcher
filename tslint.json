@@ -1,0 +1,17 @@
+{
+    "extends": "tslint:recommended",
+    "rules": {
+        "object-literal-sort-keys": false,
+        "no-console": false,
+        "no-var-requires": false,
+        "max-line-length": false,
+        "variable-name": false,
+        "trailing-comma": false,
+        "interface-name": false
+    },
+    "linterOptions": {
+        "exclude": [
+            "src/**/*.js"
+        ]
+    }
+}

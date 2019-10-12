@@ -1,0 +1,20 @@
+version: '3.5'
+services:
+  koa-server-starter:
+    container_name: koa-server-starter
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: config/Dockerfile
+    environment:
+      NODE_ENV: production
+      MODULE_NAME: koa-server-starter
+      PORT: 80
+    ports:
+      - 80:80
+    networks:
+      - network-bridge
+    command: npm start
+networks:
+  network-bridge:
+    driver: bridge

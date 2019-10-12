@@ -1,0 +1,13 @@
+{
+    "name": "koa-server-starter",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "pm2-runtime dist/App.js --name koa-server-starter -i 1 --max-memory-restart 500M --time",
+      "serve": "nodemon -e src/**/*.ts --exec \"node -r ts-node/register src/App.ts\"",
+      "debug": "node --inspect-brk=10001 -r ts-node/register src/App.ts",
+      "build": "tslint -p tsconfig.json && rm -rf dist && tsc",
+      "test": "mocha -r ts-node/register -p tsconfig.json tests/**/*.spec.ts --exit"
+    },
+    "author": "nionoku<nionoku@gmail.com>"
+  }
+  
