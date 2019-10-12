@@ -1,16 +1,16 @@
 import { Server as HttpServer } from "http";
 import Koa from "koa";
 import Container, { Service } from "typedi";
+import { MWFetchController } from "../controllers/MWFetchController";
 import { Logger } from "../utils/Logger";
-import { Kontroller } from "../controllers/Kontroller";
 import { Server } from "./Server";
 
 @Service()
 export class AppWorker implements Server {
     private app = new Koa();
     private server: HttpServer | null = null;
-    private controllers: Kontroller[] = [
-        // Container.get(extends Kontroller)
+    private controllers = [
+        Container.get(MWFetchController)
     ];
 
     constructor() {

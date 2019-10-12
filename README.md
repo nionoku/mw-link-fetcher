@@ -1,4 +1,4 @@
-# koa-server-starter
+# mw-link-fetcher
 
 The project template for NodeJS platform with Koa + Joi + TypeScript, supports Docker.
 
@@ -42,4 +42,26 @@ npm run lint
 ### View logs in production
 ```
 npm run logs
+```
+## Example
+
+**POST** */fetch*
+```
+{
+    "link": "iframe link"
+}
+```
+
+*Result:*
+```
+{
+    "m3u8: "stream link",
+    "mp4": {
+        "1080": "mp4 link",
+        "720": "mp4 link",
+        "480": "mp4 link",
+        "360": "mp4 link"
+    },
+    "sub": "sub link"
+}
 ```
