@@ -1,14 +1,14 @@
 version: '3.5'
 services:
-  koa-server-starter:
-    container_name: koa-server-starter
+  mw-link-fetcher:
+    container_name: mw-link-fetcher
     restart: unless-stopped
     build:
       context: .
       dockerfile: config/Dockerfile
     environment:
       NODE_ENV: production
-      MODULE_NAME: koa-server-starter
+      MODULE_NAME: mw-link-fetcher
       PORT: 80
     ports:
       - 80:80

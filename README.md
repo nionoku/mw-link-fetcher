@@ -1,11 +1,11 @@
-# koa-server-starter
+# mw-link-fetcher
 
 The project template for NodeJS platform with Koa + Joi + TypeScript, supports Docker.
 
 ## Project setup
 ```
 # clone this repository
-git clone https://github.com/nionoku/koa-server-starter.git
+git clone https://github.com/nionoku/mw-link-fetcher.git
 
 # change git remote to your repository
 git remote set-url origin https://github.com/your-profile/your-project-name.git
